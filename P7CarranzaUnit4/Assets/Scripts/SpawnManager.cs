@@ -11,8 +11,10 @@ public class SpawnManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+      
         SpawnEnemyWave(waveNumber);
         Instantiate(PowerUpPrefab, GenerateSpawnPosition(), PowerUpPrefab.transform.rotation);
+        
     }
 
     // Update is called once per frame
@@ -24,7 +26,8 @@ public class SpawnManager : MonoBehaviour
         {
             waveNumber++;
             SpawnEnemyWave(waveNumber);
-           
+          
+
         }
     }
 
